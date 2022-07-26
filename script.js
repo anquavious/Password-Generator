@@ -25,13 +25,13 @@ var confirmUpperCase;
 function generatePassword() {
 var confirmLength = prompt("How many characters would you like your password to have?");
 
-  // Loop if answer is outside the parameters 
+  // Loop if answer is not within the parameters 
   if(confirmLength < 8 || confirmLength > 128) {
       alert("Password length is incorrect Please try again!");
       return null
       } 
 
-      // Repeat back how many charactes the user will have  
+      // Repeat back how many characters the user will have  
       alert(`Your password will have ${confirmLength} characters`);
 
     // Determine parameters of password 
@@ -39,16 +39,19 @@ var confirmLength = prompt("How many characters would you like your password to 
     var confirmNumber = confirm("Select OK to confirm if you would like to include numeric characters");    
     var confirmLowerCase = confirm("Select OK to confirm if you would like to include lowercase characters");
     var confirmUpperCase = confirm("Select OK to confirm if you would like to include uppercase characters");
-      // Loop incase user statement is not within parameters
-      if(confirmUpperCase === false && confirmLowerCase === false && confirmSpecialCharacter === false && confirmNumericCharacter === false) {
+    
+      // If statement if all is false
+      if( confirmNumber === false && confirmUpperCase === false && confirmLowerCase === false && confirmSpecialCharacter === false) {
         alert("You must choose at least one parameter");
+        return null
       }
+      
 
-      // Assign an action to the password
+      // Assign an action to the password & validate password
       var passwordCharacters = []
       
     if (confirmSpecialCharacter && confirmLowerCase && confirmUpperCase) {
-      passwordCharacters = passwordCharacters.concat(specialCharacter, confirmUpperCase, confirmLowerCase)
+      passwordCharacters = passwordCharacters.concat(specialCharacter, uppercase, lowercase)
       
     }
 
@@ -63,13 +66,12 @@ var confirmLength = prompt("How many characters would you like your password to 
     
     if (confirmUpperCase) {
       passwordCharacters = passwordCharacters.concat(uppercase)
-      console.log(passwordCharacters)
     }
 
       //Loop selecting random characters from the array
       var random = "";
       
-      for (let p = 0; p < confirmLength; p++) {
+      for (let i = 0; i < confirmLength; i++) {
         random = random + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
       }
       return random;

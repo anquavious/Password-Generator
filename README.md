@@ -4,6 +4,8 @@
 
 This application was created to generate a random password for employees based on criteria that they have selected.The password includes special characters, numbers, lowercase, and uppercase letters. It will assist employees in having a secure and strong password that no one else can guess, which enables extra safety.
 
+
+
 # Usage
 
 The user will select the red button titled "Generate Password". Once the user selects this button a prompt will appear asking the user how many characters do they want the password to have. Once the user answers this question, a message will repeat back how many characters the password will have. The user will then be presented with questions to confirm if they would like uppercase, lowercase, numbers, and special characters. A password will then appear with a mixture of these characters within the text area. The password cannot contain less than 8 characters and more than 128 characters. 
