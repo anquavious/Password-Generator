@@ -12,6 +12,12 @@ The user will select the red button titled "Generate Password". Once the user se
 
 ![](Screenshot%20.jpeg)
 ![](Screenshot2.jpeg)
+
+LInk to deployed application
+
+https://anquavious.github.io/Password-Generator/
+
+
 # License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
